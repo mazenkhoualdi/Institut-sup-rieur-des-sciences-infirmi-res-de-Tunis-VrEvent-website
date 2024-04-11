@@ -57,21 +57,11 @@ phone.addEventListener("keyup", function () {
   }
 });
 function validation() {
-  if (namee.value.length < 3) {
-    alert("please enter your correct information");
-  } else if (last.value.length < 4) {
-    alert("please enter your correct information");
-  } else if (email.value.length < 5) {
-    alert("please enter your correct information");
-  } else if (phone.value.length != 8) {
-    alert("please enter your correct information");
-  } else {
-    Swal.fire({
-      position: "top",
-      icon: "success",
-      title: "your request has been sended succesfully",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  }
+  Swal.fire({
+    position: "top",
+    icon: "success",
+    title: "your request has been sended succesfully",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }

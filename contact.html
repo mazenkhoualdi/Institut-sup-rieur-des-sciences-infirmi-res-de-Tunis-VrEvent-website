@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <!--nav-->
@@ -27,6 +31,7 @@
       </nav>
     </header>
     <!--nav-->
+    <!--contact_back-->
     <main>
       <div class="contact-back">
         <div class="mini-titles">
@@ -34,6 +39,8 @@
           <h4>Contact us</h4>
         </div>
       </div>
+      <!--contact_back-->
+      <!--contact_container-->
       <div class="container">
         <div class="left">
           <h1>Contact information</h1>
@@ -66,11 +73,12 @@
         </div>
         <div class="right">
           <h1>Customer Service</h1>
-          <form
-            action="https://formsubmit.co/wiemsaadaoui07@gmail.com"
-            method="POST"
-            onsubmit="validation()"
-          >
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="d543ad61-1621-4675-9967-06c719877435"
+            />
             <div class="input-control">
               <label>first-name</label>
               <input
@@ -78,6 +86,7 @@
                 name="first-name"
                 id="first-name"
                 placeholder="name"
+                required
               />
               <div class="icons">
                 <i class="fa fa-times u_times"></i>
@@ -91,6 +100,7 @@
                 name="last-name"
                 id="last-name"
                 placeholder="last name"
+                required
               />
               <div class="icons">
                 <i class="fa fa-times p_times"></i>
@@ -104,17 +114,9 @@
                 name="email"
                 id="email"
                 placeholder="exemple@gmail.com"
+                required
               />
-              <input
-                type="hidden"
-                name="_autoresponse"
-                value="Thank you for contacting Us. We received your message and will get back to you as soon as possible"
-              />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://www.facebook.com/profile.php?id=61555722609444"
-              />
+
               <div class="icons">
                 <i class="fa fa-times m_times"></i>
                 <i class="fa fa-check m_check"></i>
@@ -127,6 +129,7 @@
                 name="phone"
                 id="phone"
                 placeholder="+216..."
+                required
               />
               <div class="icons">
                 <i class="fa fa-times a_times"></i>
@@ -139,12 +142,15 @@
               cols="30"
               rows="10"
               placeholder="write here"
+              required
             ></textarea>
 
-            <input id="btn" type="submit" value="send" />
+            <input id="btn" type="submit" onclick="validation()" value="send" />
           </form>
         </div>
       </div>
+      <!--contact_container-->
+      <!--contact_map/info-->
       <div class="information">
         <div class="map">
           <iframe
@@ -157,30 +163,8 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div class="person">
-          <div class="per">
-            <img src="images/p1.jpeg" alt="404" />
-            <p>
-              <span>David Walter:</span>RH Manager <br />phone:+21678787878
-              <br />email:david@gmail.com
-            </p>
-          </div>
-          <div class="per">
-            <img src="images/p2.jpeg" alt="404" />
-            <p>
-              <span>JAMES maddison:</span>marketing Manager
-              <br />phone:+216789513248 <br />email:james@gmail.com
-            </p>
-          </div>
-          <div class="per">
-            <img src="images/p3.jpeg" alt="404" />
-            <p>
-              <span>cris bruno:</span>technical service Manager
-              <br />phone:+216415855245 <br />email:cris@gmail.com
-            </p>
-          </div>
-        </div>
       </div>
+      <!--contact_map/info-->
     </main>
     <!--footer-->
     <footer>
@@ -227,6 +211,7 @@
       </div>
     </footer>
     <!--footer-->
+
     <script src="contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
