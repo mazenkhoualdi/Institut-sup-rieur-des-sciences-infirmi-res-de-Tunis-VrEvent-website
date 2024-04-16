@@ -223,7 +223,7 @@ form label {
 
 textarea {
   margin-left: 80px;
-  border: 2px solid #41d3c8;
+  border: 2px solid;
   border-radius: 10px;
 }
 .map {
